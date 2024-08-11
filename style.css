@@ -172,9 +172,33 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  justify-content: center;
+  align-items: center;
+  height: 350px;  /* Reduced from 400px */
+  width: 350px;   /* Reduced from 400px */
+  margin: auto;
+}
+
+.profile-picture {
+  animation: morph 8s ease-in-out infinite;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 300px;  /* Reduced from 35rem */
+  width: 300px;   /* Reduced from 35rem */
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
 }
 .section__pic-container img{
   border: 3px solid black;
